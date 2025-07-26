@@ -1,5 +1,0 @@
-[{
-		"file":	"/home/leon/Documents/repos/the-C-programming-language-book/the-C-programming-language-book-workspace/chapter_1/main.c",
-		"directory":	"/home/leon/Documents/repos/the-C-programming-language-book/the-C-programming-language-book-workspace/chapter_1",
-		"command":	"/bin/gcc -c /home/leon/Documents/repos/the-C-programming-language-book/the-C-programming-language-book-workspace/chapter_1/main.c -o /home/leon/Documents/repos/the-C-programming-language-book/the-C-programming-language-book-workspace/chapter_1/main.c.o -target x86_64-linux-gnu -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -O0  -gdwarf-2  -std=c99  -Wall"
-	}]
