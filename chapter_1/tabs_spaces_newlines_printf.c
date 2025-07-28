@@ -9,10 +9,11 @@ Author: VesperVanity (VV) https://github.com/VesperVanity
 
 void count_blanks_tabs_newlines();
 void replace_blanks();
+void unambiguous_tab_backspace_backslash();
 
 int main(void)
 {
-	replace_blanks();
+	unambiguous_tab_backspace_backslash();
 	return 0;
 }
 
@@ -64,6 +65,40 @@ void replace_blanks()
 			input_stream = ' ';
 			putchar(input_stream);
 			blank_count = 0;
+		}
+	}
+}
+
+void unambiguous_tab_backspace_backslash()
+{
+	//Replace each tab for \t, backspace for \b, backslash for "\\"
+	int input_stream;
+	while((input_stream = getchar()) != EOF)
+	{
+		if(input_stream != '\t' && input_stream != '\b' && input_stream != '\\')
+		{
+			putchar(input_stream);
+		}
+		else if(input_stream == '\t')
+		{
+			input_stream = 92;
+			putchar(input_stream);
+			input_stream = 116;
+			putchar(input_stream);
+		}
+		else if(input_stream == '\b')
+		{
+			input_stream = 92;
+			putchar(input_stream);
+			input_stream = 98;
+			putchar(input_stream);
+		}
+		else if(input_stream == '\\')
+		{
+			input_stream = 92;
+			putchar(input_stream);
+			input_stream = 92;
+			putchar(input_stream);
 		}
 	}
 }
