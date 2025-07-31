@@ -30,7 +30,6 @@ void input_one_word_per_line()
 				word_done = 0;
 				putchar('\n');
 			}
-			
 		}
 		else if(word_done == 0)
 		{
