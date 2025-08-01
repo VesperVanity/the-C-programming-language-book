@@ -75,7 +75,7 @@ void histogram_frequency_per_character()
 	//Go over the entire array with a for loop each getchar()
 	//Check if the current char matches any of the other chars in the array
 	//If so, increment the variable that determines how often to print #
-	int c;
+	/*int c;
 	int char_amount = 0;
 	int same_char_amount = 0;
 	int current_character = 0;
@@ -110,7 +110,44 @@ void histogram_frequency_per_character()
 			characters[char_amount] = c;
 			++char_amount;
 		}
+	}
+	*/
 
+	//Let's try it again but simpler
+	int c;
+	int char_count = 0;
+	int max_characters = 255;
+	int characters[max_characters];
+	
+	//Initialize the array
+	for(int j = 0; j < max_characters; ++j)
+	{
+		characters[j] = 0;
 	}
 
+	while((c = getchar()) != EOF)
+	{
+		if(c != ' ' && c != '\t' && c != '\n')
+		{
+			characters[char_count] = c;
+			++char_count;
+		}
+
+		for(int i = 0; i < char_count; ++i)
+		{
+			if(characters[i] == c)
+			{
+				putchar('#');
+			}
+			if(i == char_count - 1)
+			{
+				putchar('\n');
+			}
+		}
+
+		if(c == ' ' || c == '\t' || c == '\n')
+		{
+			char_count = 0;
+		}
+	}
 }
