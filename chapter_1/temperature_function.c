@@ -2,7 +2,7 @@
 The C Programming Language by Brian W. Kernighan & Dennis M. Ritchie
 Chapter 1 Exercise - 1-15
 File created: 2025-08-02
-File last modified: 2025-08-02
+File last modified: 2025-08-03
 Author: VesperVanity (VV) https://github.com/VesperVanity
 */
 #include <stdio.h>
